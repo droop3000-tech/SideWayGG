@@ -3,18 +3,18 @@ import { Phone, Send, MapPin, Clock, Mail } from 'lucide-react';
 
 const team = [
   {
-    name: 'Максим',
+    name: 'Егор',
     role: 'Основатель / Менеджер',
-    whatsapp: '+7 (999) 123-45-67',
-    whatsappLink: 'https://wa.me/79991234567',
-    telegram: '@maxim_sideway',
-    telegramLink: 'https://t.me/maxim_sideway',
-    avatar: 'М',
+    whatsapp: '+7 (914) 619-24-28',
+    whatsappLink: 'https://wa.me/79146192428',
+    telegram: '@egorchegay',
+    telegramLink: 'https://t.me/egorchegay',
+    avatar: 'E',
     gradient: 'from-pink-500 to-rose-600',
   },
   {
     name: 'Артём',
-    role: 'Техник / Администратор',
+    role: 'Основатель / Менеджер',
     whatsapp: '+7 (999) 765-43-21',
     whatsappLink: 'https://wa.me/79997654321',
     telegram: '@artem_sideway',
