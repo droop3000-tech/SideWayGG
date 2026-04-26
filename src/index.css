@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #020617;
+  --color-navy-900: #0a0f2e;
+  --color-navy-800: #111642;
+  --color-navy-700: #1a1f5c;
+  --color-navy-600: #252b76;
+  --color-pink-500: #ec4899;
+  --color-pink-400: #f472b6;
+  --color-pink-300: #f9a8d4;
+  --color-pink-600: #db2777;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ec4899 #0a0f2e;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #020617;
+  color: #e2e8f0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f2e;
+}
+::-webkit-scrollbar-thumb {
+  background: #ec4899;
+  border-radius: 3px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.text-gradient-pink {
+  background: linear-gradient(135deg, #f472b6, #ec4899, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #22d3ee, #06b6d4, #0891b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(10, 15, 46, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(236, 72, 153, 0.15);
+}
+
+.glass-strong {
+  background: rgba(10, 15, 46, 0.92);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.3), inset 0 0 15px rgba(236, 72, 153, 0.05);
+}
+
+@media (max-width: 640px) {
+  .neon-border {
+    box-shadow: 0 0 8px rgba(236, 72, 153, 0.2), inset 0 0 8px rgba(236, 72, 153, 0.03);
+  }
+}
+
+.neon-text {
+  text-shadow: 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+}
+
+@media (max-width: 640px) {
+  .neon-text {
+    text-shadow: 0 0 12px rgba(236, 72, 153, 0.4);
+  }
+}
+
+.cockpit-card:hover .cockpit-image {
+  transform: scale(1.05);
+}
+
+.cockpit-card:hover .cockpit-overlay {
+  opacity: 0;
+}
+
+/* Touch-friendly minimum tap targets */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Safe area for notched phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
