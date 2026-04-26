@@ -11,7 +11,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="./public/images/hero-bg.jpg"
+          src="/hero-bg.jpg"
           alt=""
           className="w-full h-full object-cover opacity-30"
         />
