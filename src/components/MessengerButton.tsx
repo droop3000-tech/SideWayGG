@@ -9,14 +9,14 @@ export default function MessengerButton() {
     {
       name: 'WhatsApp',
       icon: <Phone className="w-4 h-4 sm:w-5 sm:h-5" />,
-      href: 'https://wa.me/79991234567',
+      href: 'https://wa.me/79146192428',
       color: 'bg-green-500 hover:bg-green-600 active:bg-green-700',
       shadow: 'shadow-green-500/30',
     },
     {
       name: 'Telegram',
       icon: <Send className="w-4 h-4 sm:w-5 sm:h-5" />,
-      href: 'https://t.me/maxim_sideway',
+      href: 'https://t.me/egorchegay',
       color: 'bg-blue-500 hover:bg-blue-600 active:bg-blue-700',
       shadow: 'shadow-blue-500/30',
     },
